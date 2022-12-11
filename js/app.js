@@ -4,8 +4,8 @@ const strelbottom = document.querySelector(".strelbottom");
 const subt = document.querySelector(".faq__item-subt");
 
 togle_btn.addEventListener("click", () => {
-	header_block.classList.toggleAll("hidden");
-	header_block.classList.toggleAll("smooth");
+	header_block.classList.toggle("hidden");
+	header_block.classList.toggle("smooth");
 });
 strelbottom.addEventListener("click", () => {
 	subt.classList.toggle("subt-hidden");

@@ -159,7 +159,7 @@ ol {
 		right 14.1rem center, center, center;
 	@include responsive(max-phone) {
 		background-position: right -31rem center, right -55rem center,
-			right -14.1rem center, center, center;
+			right -14.1rem center, center, center right -57rem;
 	}
 }
 .career-bg {
@@ -170,4 +170,8 @@ ol {
 	background-size: 62px 62px, 62px 62px, 62px 62px, cover, cover;
 	background-position: right -3.1rem center, right 5.5rem center,
 		right 14.1rem center, center, center;
+	@include responsive(max-phone) {
+		background-position: right -31rem center, right -55rem center,
+			right -14.1rem center, center, center;
+	}
 }

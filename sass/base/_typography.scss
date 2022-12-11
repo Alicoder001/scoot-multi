@@ -1,0 +1,39 @@
+body {
+	font-size: 1.5rem;
+	line-height: 1.67;
+	font-family: $lexend;
+	font-weight: 400;
+	color: $dark;
+}
+.title {
+	color: $dark;
+	font-weight: 700;
+	font-family: $space-mono;
+}
+h1 {
+	font-size: 5.6rem;
+	line-height: 1;
+	letter-spacing: -2.5px;
+}
+h2 {
+	font-size: 4.8rem;
+	line-height: 1;
+	letter-spacing: -2.1px;
+}
+h3 {
+	font-size: 4rem;
+	letter-spacing: -1.5px;
+	line-height: 1.2;
+}
+h4 {
+	font-size: 2.4rem;
+	line-height: 1.17;
+	letter-spacing: -1.2px;
+}
+p {
+	font-size: 1.5rem;
+	line-height: 1.67;
+	font-family: $lexend;
+	font-weight: 400;
+	color: $dark;
+}

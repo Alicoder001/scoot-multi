@@ -1,0 +1,20 @@
+.header__nav {
+	&-list {
+		display: flex;
+		column-gap: 3.2rem;
+		row-gap: 2.4rem;
+		@include responsive(min-tablet) {
+			flex-direction: column;
+		}
+	}
+	&-link {
+		color: $dim-grey;
+		font-size: 1.5rem;
+		line-height: 1.67;
+		font-weight: 700;
+		font-family: $space-mono;
+	}
+	&-link:hover {
+		color: $yellow;
+	}
+}

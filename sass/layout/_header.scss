@@ -1,0 +1,56 @@
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 2.2rem 0;
+	background-color: white;
+    z-index: 100;
+
+	.container {
+		display: flex;
+		align-items: center;
+		column-gap: 5.8rem;
+		@include responsive(max-tablet) {
+			padding-left: 4rem;
+			padding-right: 4rem;
+		}
+		@include responsive(min-tablet) {
+			justify-content: center;
+		}
+	}
+	&__block {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+		@include responsive(min-tablet) {
+			padding: 6.4rem 3.2rem 11rem;
+			left: 0;
+			max-width: 60vw;
+			background-color: #333a44;
+			position: absolute;
+			top: 7.2rem;
+			flex-direction: column;
+			align-items: flex-start;
+			height: 100vh;
+			transition: 0.4s;
+			z-index: 100;
+		}
+		@include responsive(max-phone) {
+			max-width: 80vw;
+		}
+	}
+}
+.hidden {
+	@include responsive(min-tablet) {
+		display: none;
+	}
+}
+.smooth {
+	@include responsive(min-tablet) {
+		left: -100%;
+		display: flex;
+	}
+}
+

@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.container {
+	width: 100%;
+	max-width: 1440px;
+	padding-left: 16.5rem;
+	padding-right: 16.5rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul,
+ol {
+	list-style: none;
+}

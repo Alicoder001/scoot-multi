@@ -41,9 +41,6 @@
 			transition: 0.4s;
 			z-index: 100;
 		}
-		@include responsive(max-phone) {
-			max-width: 80vw;
-		}
 	}
 }
 .hidden {

@@ -6,6 +6,9 @@
 		display: inline-block;
 	}
 }
+.toggle-btn:hover {
+	cursor: pointer;
+}
 .btn {
 	width: 18rem;
 	height: 5.3rem;
@@ -16,8 +19,8 @@
 	justify-content: center;
 	font-weight: 700;
 }
-.btn:hover{
-    border: 3px solid $yellow;
-    background-color: inherit;
-    color: $yellow;
+.btn:hover {
+	border: 3px solid $yellow;
+	background-color: inherit;
+	color: $yellow;
 }

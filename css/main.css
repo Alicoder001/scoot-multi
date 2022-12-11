@@ -17,6 +17,10 @@ body {
   height: 100%;
 }
 
+.main {
+  flex-grow: 1;
+}
+
 .container {
   width: 100%;
   max-width: 1440px;
@@ -34,6 +38,110 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+.main-top {
+  margin-top: 9.6rem;
+  margin-bottom: 12rem;
+}
+@media screen and (max-width: 740px) {
+  .main-top {
+    margin-top: 6.4rem;
+  }
+}
+.main-top__block {
+  padding: 7.2rem 0;
+  background: rgba(47, 59, 89, 0.7);
+}
+.main-top__block-info {
+  max-width: 111rem;
+  width: 100%;
+  margin: auto;
+}
+.main-top .container {
+  padding: 0 8rem;
+}
+@media screen and (max-width: 970px) {
+  .main-top .container {
+    padding: 0 9.7rem;
+  }
+}
+
+.category .container {
+  padding: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.category__title {
+  margin-bottom: 10rem;
+}
+@media screen and (max-width: 550px) {
+  .category__title {
+    font-size: 3.2rem;
+  }
+}
+.category__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 111rem;
+  column-gap: 3rem;
+  margin-bottom: 12rem;
+}
+@media screen and (max-width: 970px) {
+  .category__list {
+    flex-direction: column;
+    row-gap: 5.5rem;
+  }
+}
+.category__item {
+  max-width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (max-width: 970px) {
+  .category__item {
+    max-width: 45.7rem;
+  }
+}
+.category__item-img {
+  border-radius: 50%;
+}
+.category__item-block {
+  position: relative;
+  margin-bottom: 9rem;
+}
+.category__item:first-child .category__item-block::after {
+  content: "01";
+}
+.category__item-block::after {
+  content: "02";
+  font-size: 2.4rem;
+  line-height: 1.17rem;
+  letter-spacing: -1.1px;
+  font-weight: 700;
+  font-family: "Space Mono", "Arial", sans-serif;
+  width: 9.6rem;
+  height: 9.6rem;
+  background-color: #fcb72b;
+  color: #495567;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 19.9rem;
+  left: 7.2rem;
+  z-index: 10;
+  border-radius: 50%;
+}
+.category__item:last-child .category__item-block::after {
+  content: "03";
+}
+.category__item-title {
+  margin-bottom: 2.7rem;
 }
 
 body {
@@ -140,12 +248,12 @@ p {
 }
 @media screen and (max-width: 740px) {
   .header__block {
-    padding: 6.4rem 3.2rem 11rem;
+    padding: 6.4rem 3.2rem 20rem;
     left: 0;
     max-width: 60vw;
     background-color: #333a44;
     position: absolute;
-    top: 7.2rem;
+    top: 8.2rem;
     flex-direction: column;
     align-items: flex-start;
     height: 100vh;
@@ -204,11 +312,18 @@ p {
   }
 }
 .hero__info {
+  max-width: 111rem;
+  width: 100%;
+  margin: auto;
+}
+.hero__info-block {
+  margin-right: auto;
   max-width: 50rem;
   width: 100%;
 }
 @media screen and (max-width: 970px) {
-  .hero__info {
+  .hero__info-block {
+    margin: auto;
     max-width: 57.3rem;
     display: flex;
     flex-direction: column;
@@ -407,6 +522,83 @@ p {
   }
 }
 
+.faq .container {
+  padding: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 970px) {
+  .faq .container {
+    padding: 0 3.2rem;
+  }
+}
+.faq__block {
+  max-width: 111rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faq__title {
+  margin-bottom: 6.4rem;
+}
+.faq__wrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  column-gap: 3rem;
+  row-gap: 3.2rem;
+  margin-bottom: 6.4rem;
+}
+@media screen and (max-width: 970px) {
+  .faq__wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.faq__wrap-title {
+  max-width: 35rem;
+  width: 100%;
+}
+.faq__list {
+  max-width: 73rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+}
+.faq__item {
+  width: 100%;
+  padding: 3.2rem 4rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f2f5f9;
+}
+.faq__item .title-srel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 2rem;
+  width: 100%;
+  margin-bottom: 2.4rem;
+}
+
+.streltop {
+  display: none;
+}
+
+.strelbottom {
+  display: inline-block;
+}
+
+.strelbottom,
+.streltop:hover {
+  cursor: pointer;
+}
+
 .footer__header {
   padding: 10.2rem 0;
   background-color: #495567;
@@ -536,6 +728,10 @@ p {
   .toggle-btn {
     display: inline-block;
   }
+}
+
+.toggle-btn:hover {
+  cursor: pointer;
 }
 
 .btn {

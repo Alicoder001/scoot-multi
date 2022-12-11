@@ -29,14 +29,21 @@
 	}
 
 	&__info {
-		max-width: 50rem;
+		max-width: 111rem;
 		width: 100%;
-		@include responsive(max-tablet) {
-			max-width: 57.3rem;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
+		margin: auto;
+		&-block {
+			margin-right: auto;
+			max-width: 50rem;
+			width: 100%;
+			@include responsive(max-tablet) {
+				margin: auto;
+				max-width: 57.3rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
 		}
 	}
 	&__title {

@@ -14,6 +14,7 @@ body {
 	flex-direction: column;
 	height: 100%;
 }
+
 .main {
 	flex-grow: 1;
 }
@@ -39,14 +40,26 @@ ol {
 	@include responsive(min-tablet) {
 		margin-top: 6.4rem;
 	}
+	&__title {
+		color: white;
+		@include responsive(max-phone) {
+			font-size: 4rem;
+		}
+	}
 	&__block {
 		&-info {
 			max-width: 111rem;
 			width: 100%;
 			margin: auto;
+			@include responsive(max-phone) {
+				text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
 		}
+
 		padding: 7.2rem 0;
-		background: rgb(47, 59, 89, 0.7);
 	}
 	.container {
 		padding: 0 8rem;
@@ -135,4 +148,22 @@ ol {
 	display: inline-block;
 	width: 18rem;
 	height: 5.3rem;
+}
+.about-bg {
+	background-image: url("../../images/svg/oval-full.svg"),
+		url("../../images/svg/oval.svg"), url("../../images/svg/oval.svg"),
+		url("../../images/png/hero-bg.png"), url("../../images/png/about.png");
+	background-repeat: no-repeat;
+	background-size: 62px 62px, 62px 62px, 62px 62px, cover, cover;
+	background-position: right -3.1rem center, right 5.5rem center,
+		right 14.1rem center, center, center;
+}
+.career-bg {
+	background-image: url("../../images/svg/oval-full.svg"),
+		url("../../images/svg/oval.svg"), url("../../images/svg/oval.svg"),
+		url("../../images/png/hero-bg.png"), url("../../images/png/career.png");
+	background-repeat: no-repeat;
+	background-size: 62px 62px, 62px 62px, 62px 62px, cover, cover;
+	background-position: right -3.1rem center, right 5.5rem center,
+		right 14.1rem center, center, center;
 }

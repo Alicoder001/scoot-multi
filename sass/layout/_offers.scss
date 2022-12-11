@@ -1,4 +1,59 @@
 .offers {
+	position: relative;
+	background-image: url("../images/svg/ellipse.svg"),
+		url("../images/svg/ellipse.svg"), url("../images/svg/ellipse.svg"),
+		url("../images/svg/ellipse.svg");
+	background-repeat: no-repeat;
+	background-position: right -35rem top 0, left -35rem top 60.5rem,
+		right -35rem top 120rem;
+	background-size: 445px 445px;
+	@include responsive(max-tablet) {
+		background-repeat: no-repeat;
+		background-position: right -36rem top 0, left -36rem top 94rem,
+			right -36rem top 190rem;
+		background-size: 445px 445px;
+	}
+	@include responsive(max-phone) {
+		background: none;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: 70rem;
+		height: 30rem;
+		color: red;
+		background-image: url("../images/svg/main-big-strel-left.svg");
+		background-repeat: no-repeat;
+		top: 30rem;
+		right: 0;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		color: red;
+		top: 0;
+		left: 0;
+		background-image: url("../images/svg/main-big-strel-right.svg"),
+			url("../images/svg/main-big-strel-left.svg"),
+			url("../images/svg/main-big-strel-left.svg");
+		background-position: left -40rem top 63rem, right 0 top 30rem,
+			right -40rem top 129.5rem;
+		background-repeat: no-repeat;
+		@include responsive(max-tablet) {
+			background-position: left -40rem top 95rem, right 0 top 30rem,
+				right -37rem top 195.5rem;
+		}
+		@include responsive(min-tablet) {
+			background-position: left -45rem top 95rem, right -25rem top 25rem,
+				right -37rem top 190.5rem;
+		}
+		@include responsive(max-phone) {
+			background-position: left -45rem top 85rem, right -37rem top 15rem,
+				right -37rem top 170.5rem;
+		}
+	}
 	.container {
 		padding: 0 8rem;
 		@include responsive(tablet) {

@@ -3,22 +3,24 @@
 	margin-bottom: 16rem;
 	background-image: url("../images/svg/main-big-strel-left.svg"),
 		url("../images/svg/main-little-strel-left.svg"),
-		url("../images/png/hero.png");
+		url("../images/png/hero-bg.png"), url("../images/png/hero.png");
 
 	background-repeat: no-repeat;
-	background-size: 74rem 15rem, 44.7rem 13.8rem, cover;
-	background-position: left -54rem top 35rem, top 35rem right 28.8rem,
-		center right;
+	background-size: 74rem 15rem, 44.7rem 13.8rem, cover, cover;
+	background-position: left -54rem top 35rem, top 35rem right 28.8rem, center,
+		center;
 	@include responsive(tablet) {
-		background-position: left -54rem top 35rem, top 35rem right 28.8rem,
-			center right -20rem;
+		background-position: left -540rem top 35rem, top 45rem right 28.8rem,
+			center, center right -20rem;
+	}
+	@include responsive(phone) {
+		background-position: left -540rem top 35rem, top 45rem right 28.8rem,
+			center, center left -105rem;
 	}
 	@include responsive(min-tablet) {
 		margin-top: 6.4rem;
 	}
-	&__block {
-		background: rgb(47, 59, 89, 0.7);
-	}
+
 	.container {
 		padding: 15.3rem 8rem;
 		@include responsive(max-tablet) {
@@ -32,6 +34,7 @@
 		max-width: 111rem;
 		width: 100%;
 		margin: auto;
+
 		&-block {
 			margin-right: auto;
 			max-width: 50rem;

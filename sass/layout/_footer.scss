@@ -1,7 +1,14 @@
 .footer {
 	&__header {
 		padding: 10.2rem 0;
-		background-color: #495567;
+		background-image: url("../images/svg/opacity-circle.svg"),
+			url("../images/svg/opacity-circle.svg"),
+			url("../images/svg/opacity-round.svg"),
+			url("../images/png/footer-header.png");
+		background-repeat: no-repeat;
+		background-position: bottom -17.4rem right 64.3rem,
+			bottom -17.4rem right 24rem, bottom -17.4rem right -15rem, center;
+		background-size: auto, auto, auto, cover;
 		.container {
 			padding: 0 8rem;
 			@include responsive(max-tablet) {

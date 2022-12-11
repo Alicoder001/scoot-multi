@@ -44,8 +44,10 @@ body {
   color: #495567;
 }
 
-.title {
-  color: #495567;
+h1,
+h2,
+h3,
+h4 {
   font-weight: 700;
   font-family: "Space Mono", "Arial", sans-serif;
 }
@@ -112,20 +114,23 @@ p {
   z-index: 100;
 }
 .header .container {
-  display: flex;
-  align-items: center;
-  column-gap: 5.8rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 @media screen and (max-width: 970px) {
   .header .container {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-@media screen and (max-width: 740px) {
-  .header .container {
+    padding: 0 3.2rem;
     justify-content: center;
   }
+}
+.header__wrap {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  column-gap: 5.8rem;
+  max-width: 111rem;
+  width: 100%;
+  justify-content: center;
 }
 .header__block {
   display: flex;
@@ -189,10 +194,9 @@ p {
   background: rgba(47, 59, 89, 0.7);
 }
 .hero .container {
-  padding-top: 15.3rem;
-  padding-bottom: 15.3rem;
+  padding: 15.3rem 8rem;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 970px) {
   .hero .container {
     padding: 15.3rem 3.2rem;
     display: flex;
@@ -203,7 +207,7 @@ p {
   max-width: 50rem;
   width: 100%;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 970px) {
   .hero__info {
     max-width: 57.3rem;
     display: flex;
@@ -228,19 +232,20 @@ p {
   margin-bottom: 4rem;
   max-width: 40.5rem;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 970px) {
   .hero__subtitle {
     max-width: 100%;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
   }
 }
 .hero__btn {
   margin-left: auto;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 970px) {
   .hero__btn {
-    margin-left: 0;
+    margin: auto;
   }
 }
 
@@ -248,7 +253,12 @@ p {
   margin-bottom: 20rem;
 }
 .cards .container {
-  padding: 0 3.2rem;
+  padding: 0 8rem;
+}
+@media screen and (max-width: 970px) {
+  .cards .container {
+    padding: 0 3.2rem;
+  }
 }
 .cards__list {
   display: flex;
@@ -256,9 +266,10 @@ p {
   column-gap: 3rem;
   row-gap: 4rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
   .cards__list {
     flex-direction: column;
+    align-items: center;
   }
 }
 .cards__item {
@@ -268,13 +279,14 @@ p {
   max-width: 35rem;
   position: relative;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
   .cards__item {
     flex-direction: row;
     align-items: center;
-    max-width: 57.3rem;
+    width: 100%;
+    max-width: 57rem;
     justify-content: space-between;
-    gap: 3rem;
+    column-gap: 3rem;
   }
 }
 @media screen and (max-width: 550px) {
@@ -283,7 +295,7 @@ p {
     text-align: center;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
   .cards__item-info {
     max-width: 40rem;
   }
@@ -292,6 +304,13 @@ p {
   margin-bottom: 4rem;
   width: 9.6rem;
   height: 9.6rem;
+}
+@media screen and (max-width: 550px) {
+  .cards__item-img {
+    margin-bottom: 2.4rem;
+    width: 5.6rem;
+    height: 5.6rem;
+  }
 }
 .cards__item:last-child::before {
   content: "";
@@ -303,7 +322,7 @@ p {
   background-color: #e5ecf4;
   z-index: -1;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
   .cards__item:last-child::before {
     height: 100vh;
     width: 1.5rem;
@@ -323,7 +342,7 @@ p {
 }
 
 .offers .container {
-  padding: 0 10rem;
+  padding: 0 8rem;
 }
 @media screen and (max-width: 768px) {
   .offers .container {
@@ -339,7 +358,7 @@ p {
   margin: auto;
   margin-bottom: 16rem;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 970px) {
   .offers__wrap {
     flex-direction: column-reverse;
     row-gap: 5.6rem;
@@ -349,7 +368,7 @@ p {
 .offers__info {
   max-width: 44.5rem;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 970px) {
   .offers__info {
     max-width: 57.3rem;
     display: flex;
@@ -382,27 +401,130 @@ p {
 .info-right {
   flex-direction: row-reverse;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 970px) {
   .info-right {
     flex-direction: column-reverse;
   }
 }
 
 .footer__header {
+  padding: 10.2rem 0;
+  background-color: #495567;
+}
+.footer__header .container {
+  padding: 0 8rem;
+}
+@media screen and (max-width: 970px) {
+  .footer__header .container {
+    padding: 0;
+  }
+}
+.footer__header-block {
+  margin: auto;
+  max-width: 111rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 111rem;
-  width: 100%;
-  padding: 10.2rem 0;
-  background-color: #495567;
+}
+@media screen and (max-width: 970px) {
+  .footer__header-block {
+    flex-direction: column;
+    row-gap: 4rem;
+    text-align: center;
+  }
 }
 .footer__title {
   max-width: 41.5rem;
   color: white;
 }
+@media screen and (max-width: 550px) {
+  .footer__title {
+    font-size: 3.2rem;
+    max-width: 31rem;
+  }
+}
 .footer .apps {
+  display: flex;
   column-gap: 1.8rem;
+}
+.footer .store {
+  width: 16rem;
+  height: 5.6rem;
+}
+@media screen and (max-width: 550px) {
+  .footer .store {
+    width: 13rem;
+    height: 4rem;
+  }
+}
+.footer__bottom {
+  padding: 3.5rem 0;
+  background-color: #333a44;
+}
+@media screen and (max-width: 550px) {
+  .footer__bottom {
+    padding-top: 6.4rem;
+    padding-bottom: 8.8rem;
+  }
+}
+.footer__bottom .footer__logo {
+  width: 10.8rem;
+  height: 2.85rem;
+}
+.footer__bottom .container {
+  padding: 0 8rem;
+}
+.footer__bottom .footer__link {
+  color: #939caa;
+  font-family: "Space Mono", "Arial", sans-serif;
+  font-weight: 700;
+}
+.footer__bottom .footer__link:hover {
+  color: #fcb72b;
+}
+.footer__bottom-block {
+  max-width: 111rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+@media screen and (max-width: 740px) {
+  .footer__bottom-block {
+    flex-direction: column;
+    row-gap: 8.5rem;
+    text-align: center;
+  }
+}
+.footer__bottom .logo-nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 41.5rem;
+  width: 100%;
+  align-items: center;
+}
+@media screen and (max-width: 740px) {
+  .footer__bottom .logo-nav {
+    flex-direction: column;
+    row-gap: 4rem;
+    text-align: center;
+  }
+}
+.footer__bottom .footer__list {
+  display: flex;
+  column-gap: 3.2rem;
+}
+@media screen and (max-width: 740px) {
+  .footer__bottom .footer__list {
+    flex-direction: column;
+    row-gap: 1.6rem;
+    text-align: center;
+  }
+}
+.footer__bottom .social {
+  display: flex;
+  column-gap: 2.4rem;
 }
 
 .toggle-btn {

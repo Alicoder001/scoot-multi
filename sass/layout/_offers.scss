@@ -1,10 +1,9 @@
 .offers {
 	.container {
-		padding: 0 10rem;
-        @include responsive(tablet){
-            padding: 0 3.2rem;
-        }
-
+		padding: 0 8rem;
+		@include responsive(tablet) {
+			padding: 0 3.2rem;
+		}
 	}
 	&__wrap {
 		display: flex;
@@ -14,7 +13,7 @@
 		column-gap: 4rem;
 		margin: auto;
 		margin-bottom: 16rem;
-		@include responsive(min-desktop) {
+		@include responsive(max-tablet) {
 			flex-direction: column-reverse;
 			row-gap: 5.6rem;
 			text-align: center;
@@ -22,7 +21,7 @@
 	}
 	&__info {
 		max-width: 44.5rem;
-		@include responsive(min-desktop) {
+		@include responsive(max-tablet) {
 			max-width: 57.3rem;
 			display: flex;
 			flex-direction: column;
@@ -41,15 +40,15 @@
 	}
 	&__img {
 		border-radius: 50%;
-        @include responsive(max-phone){
-            width: 31.1rem;
-            height: 31.1rem;
-        }
+		@include responsive(max-phone) {
+			width: 31.1rem;
+			height: 31.1rem;
+		}
 	}
 }
 .info-right {
 	flex-direction: row-reverse;
-	@include responsive(min-desktop) {
+	@include responsive(max-tablet) {
 		flex-direction: column-reverse;
 	}
 }

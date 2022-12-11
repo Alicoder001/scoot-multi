@@ -1,20 +1,105 @@
 .footer {
-	.container {
-	}
 	&__header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		max-width: 111rem;
-		width: 100%;
 		padding: 10.2rem 0;
 		background-color: #495567;
+		.container {
+			padding: 0 8rem;
+			@include responsive(max-tablet) {
+				padding: 0;
+			}
+		}
+		&-block {
+			margin: auto;
+			max-width: 111rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@include responsive(max-tablet) {
+				flex-direction: column;
+				row-gap: 4rem;
+				text-align: center;
+			}
+		}
 	}
 	&__title {
 		max-width: 41.5rem;
 		color: white;
+		@include responsive(max-phone) {
+			font-size: 3.2rem;
+			max-width: 31rem;
+		}
 	}
 	.apps {
+		display: flex;
 		column-gap: 1.8rem;
+	}
+	.store {
+		width: 16rem;
+		height: 5.6rem;
+		@include responsive(max-phone) {
+			width: 13rem;
+			height: 4rem;
+		}
+	}
+	&__bottom {
+		padding: 3.5rem 0;
+		@include responsive(max-phone) {
+			padding-top: 6.4rem;
+			padding-bottom: 8.8rem;
+		}
+		background-color: #333a44;
+		.footer__logo {
+			width: 10.8rem;
+			height: 2.85rem;
+		}
+		.container {
+			padding: 0 8rem;
+		}
+		.footer__link {
+			color: $dim-grey;
+			font-family: $space-mono;
+			font-weight: 700;
+		}
+		.footer__link:hover {
+			color: $yellow;
+		}
+		&-block {
+			max-width: 111rem;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: auto;
+			@include responsive(min-tablet) {
+				flex-direction: column;
+				row-gap: 8.5rem;
+				text-align: center;
+			}
+		}
+		.logo-nav {
+			display: flex;
+			justify-content: space-between;
+			max-width: 41.5rem;
+			width: 100%;
+			align-items: center;
+			@include responsive(min-tablet) {
+				flex-direction: column;
+				row-gap: 4rem;
+				text-align: center;
+			}
+		}
+		.footer__list {
+			display: flex;
+			column-gap: 3.2rem;
+			@include responsive(min-tablet) {
+				flex-direction: column;
+				row-gap: 1.6rem;
+				text-align: center;
+			}
+		}
+		.social {
+			display: flex;
+			column-gap: 2.4rem;
+		}
 	}
 }

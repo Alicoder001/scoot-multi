@@ -5,8 +5,10 @@ body {
 	font-weight: 400;
 	color: $dark;
 }
-.title {
-	color: $dark;
+h1,
+h2,
+h3,
+h4 {
 	font-weight: 700;
 	font-family: $space-mono;
 }

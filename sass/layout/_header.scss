@@ -4,26 +4,30 @@
 	width: 100%;
 	padding: 2.2rem 0;
 	background-color: white;
-    z-index: 100;
+	z-index: 100;
 
 	.container {
+		padding-left: 8rem;
+		padding-right: 8rem;
+		@include responsive(max-tablet) {
+			padding: 0 3.2rem;
+			justify-content: center;
+		}
+	}
+	&__wrap {
+		margin: auto;
 		display: flex;
 		align-items: center;
 		column-gap: 5.8rem;
-		@include responsive(max-tablet) {
-			padding-left: 4rem;
-			padding-right: 4rem;
-		}
-		@include responsive(min-tablet) {
-			justify-content: center;
-		}
+		max-width: 111rem;
+		width: 100%;
+        justify-content: center;
 	}
 	&__block {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
-
 		@include responsive(min-tablet) {
 			padding: 6.4rem 3.2rem 11rem;
 			left: 0;
@@ -53,4 +57,3 @@
 		display: flex;
 	}
 }
-

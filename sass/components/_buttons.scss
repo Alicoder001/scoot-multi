@@ -14,10 +14,9 @@
 	height: 5.3rem;
 	background-color: $yellow;
 	color: white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: 700;
+	display: inline-block;
+	text-align: center;
+	padding: 1.4rem 3.9rem;
 }
 .btn:hover {
 	border: 3px solid $yellow;

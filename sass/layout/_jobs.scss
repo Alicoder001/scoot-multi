@@ -1,0 +1,60 @@
+.job {
+	margin-bottom: 16rem;
+	.container {
+		padding: 0 8rem;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		@include responsive(max-tablet) {
+			padding: 0 4rem;
+		}
+		@include responsive(min-tablet) {
+			padding: 0 3.2rem;
+		}
+		@include responsive(max-phone) {
+			padding: 0 3.2rem;
+		}
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		max-width: 111rem;
+		row-gap: 2.4rem;
+		width: 100%;
+	}
+	&__item {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		padding: 3.2rem 6.4rem 3.5rem 4rem;
+		column-gap: 1rem;
+		background-color: $snow;
+		@include responsive(max-tablet) {
+			padding: 3.2rem 4.8rem 3.5rem 4rem;
+		}
+		@include responsive(min-tablet) {
+			padding: 3.2rem 3rem 3.5rem 3rem;
+		}
+		@include responsive(max-phone) {
+			flex-direction: column;
+			text-align: center;
+			row-gap: 1.6rem;
+		}
+		&-info {
+			display: flex;
+			flex-direction: column;
+			row-gap: 0.8rem;
+			@include responsive(max-phone) {
+				row-gap: 0.4rem;
+			}
+		}
+		&-type {
+			@include responsive(max-phone) {
+				font-size: 1.8rem;
+				line-height: 2.4rem;
+			}
+		}
+	}
+}

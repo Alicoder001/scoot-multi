@@ -62,6 +62,7 @@
 		flex-direction: column;
 		justify-content: center;
 		background-color: $snow;
+		row-gap: 2.4rem;
 		@include responsive(max-phone) {
 			padding: 3.2rem 2.8rem;
 		}
@@ -71,13 +72,15 @@
 			justify-content: space-between;
 			column-gap: 0.5rem;
 			width: 100%;
-			margin-bottom: 2.4rem;
 		}
 		&-title {
 			@include responsive(max-phone) {
 				font-size: 1.8rem;
 				line-height: 2.4rem;
 			}
+		}
+		&-subt {
+			transition: 0.5s;
 		}
 	}
 }
